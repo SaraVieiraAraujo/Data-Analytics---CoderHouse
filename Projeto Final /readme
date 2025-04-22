@@ -1,0 +1,30 @@
+#      Entrega 3
+
+Deverão desenvolver no Power BI a primeira parte do protótipo do painel, evidenciando a transformação e modelagem de dados, além da documentação solicitada.
+
+Requisitos
+Arquivo PBIX
+
+O painel deve ser entregue em um arquivo executável do Power BI, .pbix.
+
+O painel deve incluir:
+
+Mínimo de três abas definidas (Aba de capa + 3 abas extras).
+
+Modelo de dados relacional: Criar tabelas ponte para as relações de muitos para muitos entre tabelas.
+
+Tabela de calendário.
+
+Tabela de Medidas.
+
+Indicadores gerados como medidas calculadas, na tabela de medidas.
+Documentação de suporte
+
+
+Este documento deve ser apresentado em formato .pdf
+
+Deve incluir:
+
+Transformações realizadas.
+
+Medidas calculadas geradas e suas fórmulas, com as datas em que todas essas alterações foram aplicadas.
