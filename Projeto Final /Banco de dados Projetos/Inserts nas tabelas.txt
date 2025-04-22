@@ -1,0 +1,100 @@
+Inserts nas tabelas 
+
+-- Inserindo dados na tabela Clientes
+INSERT INTO Clientes (ClienteID, Nome) VALUES
+(1, 'Empresa Alfa'),
+(2, 'Beta Corp'),
+(3, 'Gamma Solutions'),
+(4, 'Delta Inc.'),
+(5, 'Sigma Technologies'),
+(6, 'Omega Systems'),
+(7, 'Epsilon Group'),
+(8, 'Zeta Industries'),
+(9, 'Theta Enterprises'),
+(10, 'Kappa Ltd.');
+
+
+ Inserindo dados na tabela Departamentos 
+INSERT INTO Departamentos (DepartamentoID, Nome) VALUES
+(101, 'Desenvolvimento de Software'),
+(102, 'Marketing Digital'),
+(103, 'Recursos Humanos'),
+(104, 'Financeiro'),
+(105, 'Infraestrutura de TI');
+
+
+
+-- Inserindo dados na tabela Responsaveis 
+INSERT INTO Responsaveis (ResponsavelID, Nome) VALUES
+(201, 'Ana Silva'),
+(202, 'Pedro Oliveira'),
+(203, 'Carla Rodrigues'),
+(204, 'Lucas Souza'),
+(205, 'Mariana Costa'),
+(206, 'Fernando Pereira'),
+(207, 'Beatriz Gomes'),
+(208, 'Ricardo Alves'),
+(209, 'Juliana Santos'),
+(210, 'Gustavo Lima');
+
+
+
+-- Inserindo dados na tabela Projetos 
+INSERT INTO Projetos (ProjetoID, ClienteID, DepartamentoID, Nome, TipoProjeto, Descricao, Prioridade, Status, GerenteProjeto, DataInicioPrevista, DataTerminoPrevista, DuracaoDias, OrcamentoEstimado, HorasEstimadas, DataInicioReal, DataTerminoReal, OrcamentoConsumido, PercentualOrcamento, TotalTarefas, TarefasConcluidas, PercentualConclusao) VALUES
+(301, 1, 101, 'Novo Sistema de CRM', 'Desenvolvimento', 'Desenvolvimento de um sistema de gestão de relacionamento com o cliente.', 'Alta', 'Em Andamento', 'Ana Silva', '2024-03-15', '2024-09-30', 200, 150000.00, 3000.00, '2024-03-20', NULL, 75000.00, 50.00, 3, 1, 33.33), -- 3 atividades para o projeto 301
+(302, 2, 102, 'Campanha de Marketing Outono 2024', 'Marketing', 'Criação e execução da campanha de marketing para a coleção de outono.', 'Média', 'Concluído', 'Pedro Oliveira', '2024-04-01', '2024-06-30', 90, 60000.00, 1500.00, '2024-04-05', '2024-06-25', 58000.00, 96.67, 2, 2, 100.00), -- 2 atividades para o projeto 302
+(303, 3, 101, 'Atualização da Plataforma E-commerce', 'Desenvolvimento', 'Melhorias e novas funcionalidades na plataforma de vendas online.', 'Alta', 'Em Planejamento', 'Carla Rodrigues', '2024-07-01', '2025-01-15', 200, 180000.00, 3500.00, NULL, NULL, 0.00, 0.00, 1, 0, 0.00), -- 1 atividade para o projeto 303
+(304, 4, 105, 'Migração para Servidores Cloud', 'Infraestrutura', 'Migração da infraestrutura de TI para um ambiente de nuvem.', 'Média', 'Em Andamento', 'Lucas Souza', '2024-05-10', '2024-08-31', 113, 90000.00, 2000.00, '2024-05-15', '2024-08-20', 70000.00, 77.78, 2, 2, 100.00), -- 2 atividades para o projeto 304
+(305, 5, 102, 'Relançamento da Marca 2025', 'Marketing', 'Estratégia completa de rebranding e relançamento da marca.', 'Alta', 'Em Planejamento', 'Mariana Costa', '2025-01-05', '2025-05-30', 145, 120000.00, 2500.00, NULL, NULL, 0.00, 0.00, 1, 0, 0.00), -- 1 atividade para o projeto 305
+(306, 6, 104, 'Implementação do Novo ERP', 'Financeiro', 'Implementação de um sistema integrado de gestão empresarial.', 'Alta', 'Em Andamento', 'Fernando Pereira', '2024-11-01', '2025-06-30', 241, 250000.00, 5000.00, '2024-11-05', NULL, 150000.00, 60.00, 2, 1, 50.00), -- 2 atividades para o projeto 306
+(307, 7, 103, 'Programa de Treinamento de Liderança', 'Recursos Humanos', 'Desenvolvimento e aplicação de um programa de treinamento para líderes.', 'Média', 'Concluído', 'Beatriz Gomes', '2024-02-10', '2024-05-15', 95, 45000.00, 1000.00, '2024-02-15', '2024-05-10', 42000.00, 93.33, 1, 1, 100.00), -- 1 atividade para o projeto 307
+(308, 8, 101, 'Desenvolvimento de Aplicativo Mobile', 'Desenvolvimento', 'Criação de um aplicativo mobile para acesso aos serviços da empresa.', 'Alta', 'Em Desenvolvimento', 'Ricardo Alves', '2025-03-01', '2025-09-30', 213, 160000.00, 3200.00, '2025-03-05', NULL, 60000.00, 37.50, 2, 1, 50.00), -- 2 atividades para o projeto 308
+(309, 9, 102, 'Estratégia de Conteúdo para Redes Sociais 2024', 'Marketing', 'Planejamento e execução da estratégia de conteúdo para as redes sociais.', 'Média', 'Concluído', 'Juliana Santos', '2024-01-15', '2024-12-31', 351, 70000.00, 1800.00, '2024-01-20', '2024-12-20', 68000.00, 97.14, 1, 1, 100.00), -- 1 atividade para o projeto 309
+(310, 10, 105, 'Otimização da Rede Interna', 'Infraestrutura', 'Projeto para melhorar a performance e segurança da rede interna.', 'Média', 'Em Planejamento', 'Gustavo Lima', '2025-06-01', '2025-08-31', 91, 55000.00, 1200.00, NULL, NULL, 0.00, 0.00, 0, 0, 0.00), -- 0 atividades para o projeto 310
+(311, 1, 104, 'Auditoria Financeira 2024', 'Financeiro', 'Realização da auditoria financeira referente ao ano de 2024.', 'Alta', 'Concluído', 'Ana Silva', '2024-07-15', '2024-10-31', 108, 80000.00, 1600.00, '2024-07-20', '2024-10-25', 78000.00, 97.50, 1, 1, 100.00), -- 1 atividade para o projeto 311
+(312, 5, 103, 'Avaliação de Desempenho 2025', 'Recursos Humanos', 'Implementação do processo de avaliação de desempenho dos colaboradores.', 'Média', 'Em Andamento', 'Mariana Costa', '2025-02-01', '2025-04-30', 89, 35000.00, 800.00, '2025-02-05', NULL, 15000.00, 42.86, 1, 0, 0.00); -- 1 atividade para o projeto 312
+
+
+
+
+-- Inserindo dados na tabela Atividades 
+INSERT INTO Atividades (AtividadeID, ProjetoID, ResponsavelID, Nome, Descricao, DataInicioPrevista, DataTerminoPrevista, CustoEstimado, CustoRealizado, DataInicioReal, DataTerminoReal, Status) VALUES
+(401, 301, 201, 'Análise de Requisitos', 'Levantamento e documentação dos requisitos do sistema CRM.', '2024-03-15', '2024-03-30', 5000.00, 4800.00, '2024-03-20', '2024-03-28', 'Concluído'),
+(402, 301, 202, 'Desenvolvimento da Interface', 'Desenvolvimento da interface de usuário do CRM.', '2024-04-01', '2024-05-31', 25000.00, 28000.00, '2024-04-03', NULL, 'Em Andamento'),
+(415, 301, 203, 'Testes de Unidade', 'Realização dos testes unitários dos módulos desenvolvidos.', '2024-05-01', '2024-05-15', 12000.00, NULL, '2024-05-05', NULL, 'Em Andamento'),
+(403, 302, 203, 'Criação de Peças Gráficas', 'Desenvolvimento das artes para a campanha de outono.', '2024-04-01', '2024-04-15', 8000.00, 7500.00, '2024-04-05', '2024-04-13', 'Concluído'),
+(404, 302, 204, 'Execução de Campanhas Online', 'Implementação das campanhas de marketing digital.', '2024-04-16', '2024-06-30', 15000.00, 16500.00, '2024-04-18', '2024-06-25', 'Concluído'),
+(412, 303, 204, 'Definição da Arquitetura', 'Definir a arquitetura técnica para a atualização da plataforma e-commerce.', '2024-07-01', '2024-07-15', 7000.00, NULL, NULL, NULL, 'Pendente'),
+(405, 304, 205, 'Configuração Servidores Cloud', 'Configuração inicial dos servidores na nuvem.', '2024-05-10', '2024-05-25', 12000.00, 11500.00, '2024-05-15', '2024-05-23', 'Concluído'),
+(406, 304, 206, 'Migração de Dados', 'Transferência dos dados para o novo ambiente cloud.', '2024-05-26', '2024-07-31', 30000.00, 35000.00, '2024-05-28', '2024-08-20', 'Concluído'),
+(413, 305, 205, 'Pesquisa de Mercado', 'Realizar pesquisa para entender o posicionamento da nova marca.', '2025-01-05', '2025-01-31', 12000.00, NULL, NULL, NULL, 'Pendente'),
+(407, 306, 207, 'Planejamento da Implementação', 'Definição do cronograma e etapas da implementação do ERP.', '2024-11-01', '2024-11-15', 10000.00, 9500.00, '2024-11-05', '2024-11-13', 'Concluído'),
+(408, 306, 208, 'Treinamento de Usuários', 'Treinamento dos funcionários para utilização do novo ERP.', '2025-01-15', '2025-03-31', 40000.00, 35000.00, '2025-01-20', NULL, 'Em Andamento'),
+(409, 308, 209, 'Design do Aplicativo', 'Criação do design visual e da experiência do usuário do aplicativo.', '2025-03-01', '2025-03-30', 18000.00, 17000.00, '2025-03-05', '2025-03-28', 'Concluído'),
+(410, 308, 210, 'Desenvolvimento Backend', 'Desenvolvimento da lógica e das funcionalidades do servidor do aplicativo.', '2025-04-01', '2025-06-30', 45000.00, NULL, '2025-04-03', NULL, 'Em Desenvolvimento'),
+(414, 311, 206, 'Análise Documentação Fiscal', 'Revisão e análise da documentação fiscal para a auditoria.', '2024-07-20', '2024-08-15', 9000.00, 8500.00, '2024-07-22', '2024-08-10', 'Concluído'),
+(416, 312, 207, 'Definição de Metodologia', 'Estabelecimento da metodologia para avaliação de desempenho.', '2025-02-05', '2025-02-20', 3000.00, NULL, '2025-02-07', NULL, 'Em Andamento');
+
+
+
+-- Inserção automática das datas de 2024cna tabela calendário 
+DECLARE @DataAtual DATE = '2024-01-01';
+
+WHILE @DataAtual <= '2024-12-31'
+BEGIN
+    INSERT INTO Calendario (Data, Ano, Mes, Dia, Semana, Trimestre)
+    VALUES (
+        @DataAtual,
+        YEAR(@DataAtual),
+        DATENAME(MONTH, @DataAtual),
+        DAY(@DataAtual),
+        DATEPART(WEEK, @DataAtual),
+        DATEPART(QUARTER, @DataAtual)
+    );
+
+    SET @DataAtual = DATEADD(DAY, 1, @DataAtual);
+END;
+
+
+select * from Calendario
+

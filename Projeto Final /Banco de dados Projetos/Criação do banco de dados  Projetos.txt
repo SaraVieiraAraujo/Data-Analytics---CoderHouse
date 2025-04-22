@@ -1,0 +1,89 @@
+Criação do banco de dados : Projetos 
+
+CREATE DATABASE Projetos 
+GO
+
+USE  Projetos 
+
+CREATE TABLE Clientes (
+    ClienteID INT PRIMARY KEY ,
+    Nome VARCHAR(100) NOT NULL
+);
+
+Go
+
+CREATE TABLE Departamentos (
+    DepartamentoID INT PRIMARY KEY ,
+    Nome VARCHAR(100) NOT NULL
+);
+
+Go 
+
+
+  
+CREATE TABLE Projetos (
+    ProjetoID INT PRIMARY KEY,
+    ClienteID INT FOREIGN KEY REFERENCES Clientes(ClienteID),
+    DepartamentoID INT FOREIGN KEY REFERENCES Departamentos(DepartamentoID),
+    Nome VARCHAR(100),
+    TipoProjeto VARCHAR(50),
+    Descricao TEXT,
+    Prioridade VARCHAR(50),
+    Status VARCHAR(50),
+    GerenteProjeto VARCHAR(100),
+    FTEs INT,
+    DataInicioPrevista DATE,
+    DataTerminoPrevista DATE,
+    DuracaoDias INT,
+    OrcamentoEstimado DECIMAL(18,2),
+    HorasEstimadas DECIMAL(18,2),
+    DataInicioReal DATE,
+    DataTerminoReal DATE,
+    OrcamentoConsumido DECIMAL(18,2),
+    PercentualOrcamento DECIMAL(5,2),
+    TotalTarefas INT,
+    TarefasConcluidas INT,
+    PercentualConclusao DECIMAL(5,2)
+);
+/**
+ALTER TABLE Projetos
+DROP COLUMN FTEs;
+**/ 
+GO 
+
+
+CREATE TABLE Responsaveis (
+    ResponsavelID INT PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL
+);
+
+GO
+
+
+
+CREATE TABLE Atividades (
+    AtividadeID INT PRIMARY KEY,
+    ProjetoID INT FOREIGN KEY REFERENCES Projetos(ProjetoID),
+    ResponsavelID INT FOREIGN KEY REFERENCES Responsaveis(ResponsavelID),
+    Nome VARCHAR(100),
+    Descricao TEXT,
+    DataInicioPrevista DATE,
+    DataTerminoPrevista DATE,
+    CustoEstimado DECIMAL(18,2),
+    CustoRealizado DECIMAL(18,2),
+    DataInicioReal DATE,
+    DataTerminoReal DATE,
+    Status VARCHAR(50)
+);
+
+Go 
+
+
+CREATE TABLE Calendario (
+    Data DATE PRIMARY KEY,
+    Ano INT,
+    Mes VARCHAR(50),
+    Dia INT,
+    Semana INT,
+    Trimestre INT
+);

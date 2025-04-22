@@ -1,0 +1,43 @@
+Alterações que foram realizadas no banco durante o projeto. 
+
+Criei a tabela de gerente de projetos e inclui os gerentes deletei a coluna  gerente de projetos da tabela projetos e deixei somente a coluna gerenteprojetoid. 
+
+
+CREATE TABLE GerenteProjetos
+(
+  GerenteProjetoID INT PRIMARY KEY,
+  Nome VARCHAR(100) NOT NULL
+)
+
+alterações feita no banco durante o projeto
+
+select * from projetos 
+ALTER TABLE Projetos ADD GerenteProjetoID INT;
+ALTER TABLE Projetos ADD FOREIGN KEY (GerenteProjetoID) REFERENCES GerenteProjetos(GerenteProjetoID);
+-- Atualizações com ProjetoID de 301 a 317
+UPDATE Projetos SET GerenteProjetoID = 1 WHERE ProjetoID = 301;
+UPDATE Projetos SET GerenteProjetoID = 2 WHERE ProjetoID = 302;
+UPDATE Projetos SET GerenteProjetoID = 3 WHERE ProjetoID = 303;
+UPDATE Projetos SET GerenteProjetoID = 3 WHERE ProjetoID = 304;
+UPDATE Projetos SET GerenteProjetoID = 4 WHERE ProjetoID = 305;
+UPDATE Projetos SET GerenteProjetoID = 1 WHERE ProjetoID = 306;
+UPDATE Projetos SET GerenteProjetoID = 6 WHERE ProjetoID = 307;
+UPDATE Projetos SET GerenteProjetoID = 6 WHERE ProjetoID = 308;
+UPDATE Projetos SET GerenteProjetoID = 7 WHERE ProjetoID = 309;
+UPDATE Projetos SET GerenteProjetoID = 8 WHERE ProjetoID = 310;
+UPDATE Projetos SET GerenteProjetoID = 8 WHERE ProjetoID = 311;
+UPDATE Projetos SET GerenteProjetoID = 8 WHERE ProjetoID = 312;
+UPDATE Projetos SET GerenteProjetoID = 8 WHERE ProjetoID = 313;
+UPDATE Projetos SET GerenteProjetoID = 4 WHERE ProjetoID = 314;
+UPDATE Projetos SET GerenteProjetoID = 6 WHERE ProjetoID = 315;
+UPDATE Projetos SET GerenteProjetoID = 8 WHERE ProjetoID = 316;
+UPDATE Projetos SET GerenteProjetoID = 8 WHERE ProjetoID = 317;
+ 
+begin tran ---commit 
+ALTER TABLE Projetos
+DROP COLUMN GerenteProjeto;
+commit 
+***/
+
+
+
